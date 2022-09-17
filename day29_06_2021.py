@@ -34,8 +34,8 @@ def printReverse():
     firstname = str(input('Enter Frist name\n'))
     lasttname = str(input('Enter last name\n'))
 
-    concat_str = firstname + ' ' + lasttname
-    print('Name after reverse: ' + concat_str[::-1])
+    concat_str = f'{firstname} {lasttname}'
+    print(f'Name after reverse: {concat_str[::-1]}')
 
 
 # printReverse()
@@ -46,11 +46,9 @@ def printReverse():
 
 def createListAndTuple():
     inp = str(input("Enter something with commma separte\n"))
-    emp_list = []
-
     if ',' in inp:
-        for i in inp.split(','):
-            emp_list.append(i)
+        emp_list = list(inp.split(','))
+
         emp_tuple = tuple(emp_list)
         print(emp_list)
         print(emp_tuple)
@@ -92,9 +90,8 @@ def printFileExtension():
 
 def firstAndLastColour():
     color_list = ["Red", "Green", "White", "Black", "yellow"]
-    check_length = len(color_list)
     print('First colour: ', color_list[0])
-    print('Last colour: ', color_list[check_length - 1])
+    print('Last colour: ', color_list[-1])
 
 
 firstAndLastColour()

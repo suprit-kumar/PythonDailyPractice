@@ -16,7 +16,7 @@ def maximum_of_two_number():
     inp1 = int(input('Enter first number\n'))
     inp2 = int(input('Enter second number\n'))
 
-    ans = inp1 if inp1 > inp2 else inp2
+    ans = max(inp1, inp2)
     print("The greater number is: ", ans)
 
 
@@ -28,14 +28,11 @@ def maximum_of_two_number():
 
 def find_factorial():
     inp = int(input("Enter number to find factorial\n"))
-    count = 1
     num = 1
-    while count <= inp:
+    for count in range(1, inp + 1):
         num = num * count
         print(num ,"=",num,"*",count)
-        count+=1
-
-    print("Factorial of input " + str(inp) + " is:", num)
+    print(f"Factorial of input {inp} is:", num)
 # find_factorial()
 
 '''Python Program for simple interest'''

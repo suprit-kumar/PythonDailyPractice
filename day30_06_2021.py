@@ -4,7 +4,7 @@
 def find_circle_area():
     pi = 3.141
     radius = float(input("Enter radius of the circle\n"))
-    print("The area of the circle is: ", pi * (radius * radius))
+    print("The area of the circle is: ", pi * radius**2)
 
 
 # find_circle_area()

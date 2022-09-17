@@ -2,13 +2,10 @@
 
 
 def circle_area(radius):
-    if isinstance(radius, int) or isinstance(radius, float):
-        pi = 3.141
-        area = pi * (radius ** 2)
-        return "The area of the circle is: " + str(area) +" sq.m"
-
-    else:
+    if not isinstance(radius, (int, float)):
         return "Input must be int or float type"
+    area = 3.141 * radius ** 2
+    return f"The area of the circle is: {str(area)} sq.m"
 
 call = circle_area(5)
 print(call)
